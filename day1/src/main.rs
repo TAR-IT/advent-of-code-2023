@@ -2,6 +2,28 @@ use std::fs::File;
 use std::io::Read;
 
 
+fn main() {
+    // Open the file in read-only mode
+    let file = File::open("input.txt");
+
+    // Handle the result of opening the file
+    match file {
+        Ok(mut file) => {
+            // Read the contents of the file into a String
+            let mut input = String::new();
+            file.read_to_string(&mut input).unwrap();
+
+            // Call the part_1 and part_2 functions with the input and print the results
+            println!("Part 1: {}", part_1(&input));
+            println!("Part 2: {}", part_2(&input));
+        }
+        Err(e) => {
+            eprintln!("Error opening the file: {}", e);
+        }
+    }
+}
+
+
 fn part_1(input: &str) -> u32 {
     input.lines().map(|line| {
         line.chars().find_map(|c| c.to_digit(10)).unwrap() * 10 +
@@ -26,24 +48,3 @@ fn part_2(input: &str) -> usize {
     }).sum()
 }
 
-
-fn main() {
-    // Open the file in read-only mode
-    let file = File::open("input.txt");
-
-    // Handle the result of opening the file
-    match file {
-        Ok(mut file) => {
-            // Read the contents of the file into a String
-            let mut input = String::new();
-            file.read_to_string(&mut input).unwrap();
-
-            // Call the part_1 and part_2 functions with the input and print the results
-            println!("Part 1: {}", part_1(&input));
-            println!("Part 2: {}", part_2(&input));
-        }
-        Err(e) => {
-            eprintln!("Error opening the file: {}", e);
-        }
-    }
-}
