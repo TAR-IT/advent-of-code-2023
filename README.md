@@ -3,7 +3,7 @@ These are my attempts on [Advent of Code 2023](https://adventofcode.com) solutio
 
 Every folder contains 
 
-- the program to solve both parts of the puzzle of each day.
-- a input.txt file for the puzzle input.
+- the program to solve both parts of the puzzle (via functions called part_1 and part_2).
+- the **input.txt** file for the puzzles input data.
 
 The program takes the input.txt and returns the solutions for part 1 and part 2.
