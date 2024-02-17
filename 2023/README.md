@@ -1,12 +1,12 @@
-# Advent of Code solutions
-These are my attempts on [Advent of Code](https://adventofcode.com). I will choose a different language each year and upload my results into this repository.
+# Advent of Code 2023 - Rust solutions
+These are my attempts on [Advent of Code 2023](https://adventofcode.com) in [Rust](https://www.rust-lang.org).
 
-Every folder (*/$year/$day/*) contains
-- the program to solve both parts of the puzzle
-- the **input.txt** file for the puzzles input data
-- other files for language-related dependencies
+Every folder (*./$day/*) contains
+- the program to solve both parts of the puzzle (*./$day/src/main.rs*)
+- the **input.txt** file for the puzzles input data (*./$day/input.txt*).
+- Cargo.lock & Cargo.toml for dependencies
 
-The program itself includes a "main" function that handles input errors and/or calls the two functions that solve Part 1 and Part 2 of the problem set.
+The program itself includes a "main" function that handles input errors, a "solve" function that takes the inputs, calls the part_1 & part_2 functions and prints the results, aswell as one function for every part of the day (named "part_1" and "part_2").
 
 ## Table of Contents
 
@@ -23,8 +23,10 @@ The program itself includes a "main" function that handles input errors and/or c
 
 ### Installation
 
+When you have installed [Rust Lang](https://www.rust-lang.org) in your enviroment already:
+
 1. Clone/fork the repository.
-2. *cd* into the directory of your choice and read the README of the corresponding programming language/directory.
+2. *cd* into the directory of your choice and type *cargo run* to execute the Rust program inside the container.
 
 ## License
 This project is licensed under [The Unlicense](/LICENSE).
