@@ -1,23 +1,29 @@
-fn part_1(input: &str) -> usize {
-    let mut current_node = "AAA";
-    let mut steps = 0;
+use std::fs::File;
+use std::io::{Read, Error};
 
-    loop {
-        for instruction in input.chars() {
-            // Update the current node based on the instruction
-            current_node = match instruction {
-                'R' => current_node.split(", ").nth(1).unwrap_or(current_node),
-                'L' => current_node.split(", ").next().unwrap_or(current_node),
-                _ => current_node, // Ignore other characters
-            };
-
-            // Increment the step count
-            steps += 1;
-
-            // If ZZZ is reached, return the step count
-            if current_node == "ZZZ" {
-                return steps;
-            }
-        }
+fn main() {
+    if let Err(e) = solve() {
+        eprintln!("Error: {}", e);
     }
+}
+
+fn solve() -> Result<(), Error> {
+    let mut file = File::open("input.txt")?;
+    let mut input = String::new();
+    file.read_to_string(&mut input)?;
+    
+    println!("Part 1: {}", part_1(&input));
+    println!("Part 2: {}", part_2(&input));
+    
+    Ok(())
+}
+
+fn part_1(input: &str) -> usize {
+    // Implement part 1 logic here
+    0 // Placeholder, replace with actual logic
+}
+
+fn part_2(input: &str) -> usize {
+    // Implement part 2 logic here
+    0 // Placeholder, replace with actual logic
 }
