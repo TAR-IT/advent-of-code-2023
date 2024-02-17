@@ -1,12 +1,11 @@
 # Advent of Code solutions
-These are my attempts on [Advent of Code](https://adventofcode.com). I will attempt to choose a different language every year.
+These are my attempts on [Advent of Code](https://adventofcode.com). I will attempt to choose a different language every year - for now, it is only 2023 in Rust.
 
-Every folder contains 
-
+Every folder contains
 - the program to solve both parts of the puzzle (via one file called **main.rs** that calls the functions part_1 and part_2 via the main function).
 - the **input.txt.** file for the puzzles input data.
 
-The program takes the input.txt and returns the solutions for part 1 and part 2.
+The program itself includes a "main" function that handles input errors, a "solve" function that takes the inputs, calls the part_1 & part_2 functions and prints the results, aswell as one function for every part of the day (named "part_1" and "part_2").
 
 ## Table of Contents
 |  [2023 (Rust)](/2023) |
