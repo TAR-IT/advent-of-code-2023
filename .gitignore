@@ -1,4 +1,7 @@
-**/target/
-**/*.rs.bk
-**/Cargo.lock
-.directory
+*.env
+*.sqlite3
+*.db
+**/target
+**/__pycache__
+*. pyc
+**/day*.rs
